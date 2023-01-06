@@ -1,0 +1,32 @@
+
+GET http://localhost:6000/posts HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXNyYWwiLCJpYXQiOjE2NzI5Mzg2ODEsImV4cCI6MTY3MjkzODcwNn0.Ep1aeRntyVxkoBMVCR6nhHNaT6lGjPxus95igmWR3Go
+
+###
+
+POST  http://localhost:7000/token HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXNyYWwiLCJpYXQiOjE2NzI5Mzg2ODF9.i6kuJz6YugVF0iNrFVeRbmdAn4cunXrW91o3AjfbFKM"
+}
+
+###
+
+DELETE http://localhost:7000/logout
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXNyYWwiLCJpYXQiOjE2NzI5Mzg2ODF9.i6kuJz6YugVF0iNrFVeRbmdAn4cunXrW91o3AjfbFKM"
+}
+
+
+###
+
+POST  http://localhost:7000/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "esral"
+}
+
